@@ -29,6 +29,32 @@ Yet, this is not a perfect solution. This approach still suffers from the same p
 - Lack of Dependency Resolution: The order of the files are still important. myApp.js file must come before any other files. And main.js file must come after all other library files.
 - Pollution of global namespace: Number of global variable is now 1, but is not zero yet
 
+# CommonJS
+In 2009, there were discussions about bringing JavaScript to server side. Thus ServerJS was born. ServerJS later changed its name to CommonJS.
+
+__CommonJS is not a JavaScript library. It is a standardization organization. It is like ECMA or W3C.__ 
+- __ECMA defines the language specification for JavaScript.__
+- __W3C defines JavaScript web API, such as DOM or DOM events.__
+- __The goal of CommonJS is to define common APIs for web server, desktop and command line applications.__
+
+CommonJS also defines APIs for module. Since there is no HTML page and no _script_ tag on server application, it make sense to have some clear APIs for modules. Modules need to be exposed(export) to others for use and be accessible(import). 
+
+
+```code
+// add.js
+module.exports = function add(a, b){
+  return a+b;
+}
+
+// another file
+var add = require(‘./add’);
+```
+If you have written code on NodeJS, this syntax may look familiar. That’s because NodeJS implemented CommonJS style module API.
+
+
+
+
+
 ## A History of JavaScript Modules and Bundling, For the Post-ES6 Developer
 [https://8thlight.com/insights/a-history-of-javascript-modules-and-bundling-for-the-post-es6-developer](https://8thlight.com/insights/a-history-of-javascript-modules-and-bundling-for-the-post-es6-developer)
 
