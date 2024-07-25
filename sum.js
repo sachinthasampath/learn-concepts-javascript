@@ -1,8 +1,8 @@
-// sum.js
-define(['add', 'reduce'], function (add, reduce) {
-    var sum = function (arr) {
-        return reduce(arr, add);
-    };
 
-    return sum;
-})
+//sum.js
+var reduce = require('./reduce');
+var add = require('./add');
+
+module.exports = function(arr){
+  return reduce(arr, add);
+};

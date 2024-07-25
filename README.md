@@ -81,6 +81,18 @@ RequireJS and AMD solve all the problems we had before. However, it creates othe
 - List of dependencies in the array must match the list of arguments in the function. If there are many dependencies, it can be hard to maintain the order of the dependencies. If you have dozens of dependencies in your module, and later if you had to remove one in the middle, it can be difficult to find matching module and argument.
 - With current browsers(HTTP 1.1), loading many small files can degrade the performance.
 
+
+
+# Browserify
+Because of these reasons, some people want to use CommonJS syntax, instead. But CommonJS syntax is for server and synchronous, right? Browserify is here to rescue you! With Browserify, you can use CommonJS module in browser application. Browserify is a module bundler. Browserify traverse the dependency tree of your codes and bundle them up in a single file.
+
+```sh
+npm install -g browserify
+
+browserify main.js -o bundle.js
+```
+
+
 ## A History of JavaScript Modules and Bundling, For the Post-ES6 Developer
 
 [https://8thlight.com/insights/a-history-of-javascript-modules-and-bundling-for-the-post-es6-developer](https://8thlight.com/insights/a-history-of-javascript-modules-and-bundling-for-the-post-es6-developer)
