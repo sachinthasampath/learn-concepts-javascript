@@ -1,8 +1,7 @@
+// sum.js
+import add from './add';
+import reduce from './reduce';
 
-//sum.js
-var reduce = require('./reduce');
-var add = require('./add');
-
-module.exports = function(arr){
-  return reduce(arr, add);
-};
+export default function sum(arr) {
+    return reduce(arr, add);
+}

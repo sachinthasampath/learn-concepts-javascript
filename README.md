@@ -92,6 +92,14 @@ npm install -g browserify
 browserify main.js -o bundle.js
 ```
 
+# ES6 module syntax
+
+JavaScript didn’t have module system built into the language. That’s the reason we have so many different way of importing and exporting modules. But that has recently changed. With ES6 language spec, module is part of JavaScript. So the answer to the question is you need to use ES6 module syntax if you want your project to be future-proof.
+
+### Webpack
+
+Webpack is a module bundler. Just like Browserify, it traverses dependency tree and bundles up into a single or more files. If it is the same as Browserify, why would we need yet another module bundler? Webpack can handle CommonJS, AMD and ES6 modules.
+
 
 ## A History of JavaScript Modules and Bundling, For the Post-ES6 Developer
 
